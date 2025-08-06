@@ -21,6 +21,8 @@ class Item extends StatelessWidget {
             padding: const EdgeInsets.only(left: 16),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+
               children: [
                 Text(
                   number.jpName ?? '',

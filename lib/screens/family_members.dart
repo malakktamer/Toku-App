@@ -14,7 +14,7 @@ class FamilyMembersPage extends StatelessWidget {
     Number(
       sound: 'sounds/family_members/mother.wav',
       image: 'assets/images/family_members/family_mother.png',
-      jpName: '',
+      jpName: 'Hahaoya',
       enName: 'mother',
     ),
     Number(
@@ -26,32 +26,32 @@ class FamilyMembersPage extends StatelessWidget {
     Number(
       sound: 'sounds/family_members/grand father.wav',
       image: 'assets/images/family_members/family_grandfather.png',
-      jpName: '',
+      jpName: 'Ojiisan',
       enName: 'grand father',
     ),
     Number(
       sound: 'sounds/family_members/grand mother.wav',
       image: 'assets/images/family_members/family_grandmother.png',
-      jpName: '',
+      jpName: 'Sobo',
       enName: 'grand mohter',
     ),
 
     Number(
       sound: 'sounds/family_members/son.wav',
       image: 'assets/images/family_members/family_son.png',
-      jpName: '',
+      jpName: 'Musuko',
       enName: 'son',
     ),
     Number(
       sound: 'sounds/family_members/younger brohter.wav',
       image: 'assets/images/family_members/family_younger_brother.png',
-      jpName: '',
+      jpName: 'Otōto',
       enName: 'younger brohter',
     ),
     Number(
       sound: 'sounds/family_members/younger sister.wav',
       image: 'assets/images/family_members/family_younger_sister.png',
-      jpName: '',
+      jpName: 'Imōto',
       enName: 'younger sister',
     ),
   ];
@@ -63,8 +63,9 @@ class FamilyMembersPage extends StatelessWidget {
         backgroundColor: Color(0xff46322B),
         title: Text(
           'Family Members',
-          style: TextStyle(fontSize: 20, backgroundColor: Colors.white),
+          style: TextStyle(fontSize: 20, color: Colors.white),
         ),
+        foregroundColor: Colors.white,
       ),
       body: ListView.builder(
         itemCount: numbers.length,

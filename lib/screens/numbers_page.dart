@@ -74,8 +74,9 @@ class NumbersPage extends StatelessWidget {
         backgroundColor: Color(0xff46322B),
         title: Text(
           'Numbers',
-          style: TextStyle(fontSize: 20, backgroundColor: Colors.white),
+          style: TextStyle(fontSize: 20, color: Colors.white),
         ),
+        foregroundColor: Colors.white,
       ),
       body: ListView.builder(
         itemCount: numbers.length,
