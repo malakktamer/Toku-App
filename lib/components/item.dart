@@ -3,9 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_6/models/number.dart';
 
 class Item extends StatelessWidget {
-  const Item({required this.number, required this.color});
+  const Item({required this.number, required this.color, this.isShow = true});
   final Number number;
   final Color color;
+  final bool isShow;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -13,25 +14,27 @@ class Item extends StatelessWidget {
       color: color,
       child: Row(
         children: [
-          Container(
-            color: Color(0xffFEF4DA),
-            child: Image.asset(number.image ?? ''),
-          ),
+          if (isShow)
+            Container(
+              color: Color(0xffFEF4DA),
+              child: Image.asset(number.image ?? ''),
+            ),
           Padding(
             padding: const EdgeInsets.only(left: 16),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
-
               children: [
-                Text(
-                  number.jpName ?? '',
-                  style: TextStyle(fontSize: 18, color: Colors.white),
-                ),
-                Text(
-                  number.enName ?? '',
-                  style: TextStyle(fontSize: 18, color: Colors.white),
-                ),
+                if (number.jpName != null)
+                  Text(
+                    number.jpName ?? '',
+                    style: TextStyle(fontSize: 18, color: Colors.white),
+                  ),
+                if (number.enName != null)
+                  Text(
+                    number.enName ?? '',
+                    style: TextStyle(fontSize: 18, color: Colors.white),
+                  ),
               ],
             ),
           ),

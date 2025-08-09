@@ -18,3 +18,11 @@ class FamilyMember {
     this.enName,
   });
 }
+
+class colors {
+  final String sound;
+  final String? image;
+  final String? jpName;
+  final String? enName;
+  const colors({required this.sound, this.image, this.jpName, this.enName});
+}
